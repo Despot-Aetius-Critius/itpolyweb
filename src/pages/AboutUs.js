@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-function AboutUs() {
+const AboutUs = () => {
   return (
-    <div className="p-6">
-      <h2 className="text-3xl font-bold">About Us</h2>
-      <p className="mt-4">We are committed to providing high-quality education in information technology, equipping students with the skills needed for the digital age.</p>
+    <div>
+      <h2 className="text-3xl font-bold mb-4 text-center">About Us</h2>
+      <p className="text-center">The IT Department at Lanna Polytechnic College, Chiang Mai, is dedicated to advancing technology education and preparing students for successful careers.</p>
     </div>
   );
-}
+};
 
 export default AboutUs;

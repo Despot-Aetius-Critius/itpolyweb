@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-function Courses() {
+const Courses = () => {
   return (
-    <div className="p-6">
-      <h2 className="text-3xl font-bold">Our Courses</h2>
-      <ul className="mt-4 space-y-2">
-        <li>- Computer Programming</li>
-        <li>- Web Development</li>
-        <li>- Database Management</li>
-        <li>- Network Administration</li>
+    <div>
+      <h2 className="text-3xl font-bold mb-4 text-center">Our Courses</h2>
+      <ul className="list-disc pl-6 max-w-md mx-auto">
+        <li className="mb-2">Introduction to Programming</li>
+        <li className="mb-2">Web Development</li>
+        <li className="mb-2">Database Management</li>
+        <li className="mb-2">Network Security</li>
       </ul>
     </div>
   );
-}
+};
 
 export default Courses;
