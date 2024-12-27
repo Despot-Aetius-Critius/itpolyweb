@@ -70,52 +70,57 @@
     line-height: 1.4; /* ความสูงของบรรทัด */
   }
   
- /* ระยะห่างระหว่าง container หลักและแกลเลอรี */
+ /* Container ของแกลเลอรี */
 .image-gallery-container {
-    margin-top: 2rem; /* ระยะห่างจาก container หลัก */
-    text-align: center;
-    max-width: 1000px;
-    width: 100%;
-    background-color: #474747;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin-top: 3rem; /* ระยะห่างจาก container หลัก */
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #474747;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-  
-  /* หัวข้อใหญ่ของแกลเลอรี */
-  .gallery-title {
-    font-size: 2rem; /* ขนาดตัวอักษร */
-    font-weight: bold; /* ตัวหนา */
-    color: #d69e2e; /* สีของตัวอักษร */
-    margin-bottom: 1.5rem; /* ระยะห่างจาก container ด้านล่าง */
-  }
-  
-  /* Grid ของแกลเลอรี */
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* แบ่ง container ตามขนาด */
-    gap: 1rem; /* ระยะห่างระหว่าง containers */
-  }
-  
-  /* Container เล็กแต่ละรูป */
-  .image-item {
-    background-color: #1a1a1a; /* สีพื้นหลังของ container */
-    border-radius: 8px; /* ขอบมน */
-    height: 150px; /* ความสูงของ container */
-    display: flex;
-    align-items: center; /* จัดข้อความใน container ให้อยู่กลาง */
-    justify-content: center;
-    font-size: 1rem; /* ขนาดตัวอักษร */
-    font-weight: bold; /* ตัวหนา */
-    color: #ffffff; /* สีตัวอักษร */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เงา */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Hover Effect */
-  .image-item:hover {
-    transform: translateY(-5px); /* ยกตัว container */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
-  }
-  
+/* หัวข้อของแกลเลอรี */
+.gallery-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d69e2e;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid ของแกลเลอรี */
+.image-gallery {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* แบ่ง container ตามขนาด */
+  gap: 1rem; /* ระยะห่างระหว่าง containers */
+}
+
+/* Container สำหรับแต่ละรูปภาพ */
+.image-item {
+  background-color: #1a1a1a; /* สีพื้นหลัง */
+  border-radius: 8px; /* ขอบมน */
+  height: 150px; /* ความสูงของ container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* เงาบริเวณ container */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* ป้องกันรูปภาพออกจากขอบ */
+}
+
+/* รูปภาพในแต่ละ container */
+.gallery-image {
+  width: 100%; /* ทำให้ภาพมีความกว้างเต็ม container */
+  height: 100%; /* ทำให้ภาพมีความสูงเต็ม container */
+  object-fit: cover; /* ปรับให้ภาพเต็ม container โดยไม่เสียสัดส่วน */
+}
+
+/* Hover effect */
+.image-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}

@@ -26,16 +26,30 @@ const Home = () => {
 
       {/* Container ใหม่สำหรับแกลเลอรี (Moved Below) */}
       <div className="image-gallery-container">
-        <h2 className="gallery-title">แกลเลอรีรูปภาพ</h2>
-        <div className="image-gallery">
-          <div className="image-item">ภาพ 1</div>
-          <div className="image-item">ภาพ 2</div>
-          <div className="image-item">ภาพ 3</div>
-          <div className="image-item">ภาพ 4</div>
-          <div className="image-item">ภาพ 5</div>
-        </div>
-      </div>
+  <h2 className="gallery-title">แกลเลอรีรูปภาพ</h2>
+  <div className="image-gallery">
+    <div className="image-item">
+      <img src="/images/IT1.jpeg" alt="ภาพ 1" className="gallery-image"></img>
     </div>
+    <div className="image-item">
+      <img src="/images/IT2.jpeg" alt="ภาพ 2" className="gallery-image"></img>
+    </div>
+    <div className="image-item">
+      <img src="/images/IT3.jpeg" alt="ภาพ 3" className="gallery-image"></img>
+    </div>
+    <div className="image-item">
+      <img src="/images/IT4.jpeg" alt="ภาพ 4" className="gallery-image"></img>
+    </div>
+    <div className="image-item">
+      <img src="/images/IT5.jpeg" alt="ภาพ 5" className="gallery-image"></img>
+    </div>
+    <div className="image-item">
+      <img src="/images/IT6.jpeg" alt="ภาพ 6" className="gallery-image"></img>
+    </div>
+    </div>
+  </div>
+</div>
+
   );
 };
 
